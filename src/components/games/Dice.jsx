@@ -10,7 +10,6 @@ import betSound from "../../assets/second/betClick.mp3";
 import rollSound from "../../assets/second/rolling.mp3";
 import Loader from "./hook/Loader";
 import { useSearchParams } from "react-router-dom";
-import { useWallet } from "../../../../../../client-bet-main/client-bet-main/src/context/wallet";
 import { createWithdrawalRequest, fetchUserBalance, fundWallet } from "../../../../../../client-bet-main/client-bet-main/src/services/wallet";
 import axios from "axios";
 
