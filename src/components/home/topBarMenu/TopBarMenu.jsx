@@ -295,19 +295,19 @@ const TopBarMenu = () => {
         </div>
       </div>
       {/* -----------------------------mobile-menu--------------------------- */}
-      <div
+      {/* <div
         className={
           closepopup
             ? " justify-between hidden items-center bg-theme-color border-b-[2px] border-white px-[10px] py-[10px]"
             : "flex justify-between items-center lg:hidden bg-[#FFB805]  border-b-[2px] border-white px-[10px] py-[8px]"
         }
-      >
-        <div className="flex justify-center items-center gap-[10px]">
-          <button onClick={handlepopup} className="text-[20px] cursor-pointer">
+      > */}
+        {/* <div className="flex justify-center items-center gap-[10px]"> */}
+          {/* <button onClick={handlepopup} className="text-[20px] cursor-pointer">
             <IoMdClose />
-          </button>
+          </button> */}
           {/* <img className="w-[40px] rounded-[3px]" src={square_img} alt="" /> */}
-          <div>
+          {/* <div>
             <h2 className="font-[600] uppercase mb-[3px]">GGwiwi Hub</h2>
             <div className="flex justify-center items-center text-green-600 gap-[4px]">
               <IoIosStar />
@@ -316,14 +316,14 @@ const TopBarMenu = () => {
               <IoIosStar />
               <IoIosStar />
             </div>
-          </div>
-        </div>
+          </div> */}
+        {/* </div> */}
         {/* <div>
           <button className="px-[10px] py-[8px] bg-black text-[13px] cursor-pointer text-white rounded-[8px]">
             Download
           </button>
         </div> */}
-      </div>
+      {/* </div> */}
       <div className="flex xl:hidden  items-center justify-between py-[15px] bg-[#212121] px-3 w-full">
         <div className="text-white font-bold text-lg">
           <NavLink to="/">
