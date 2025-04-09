@@ -54,7 +54,7 @@ const Mobilesidebar = () => {
   const [approved_withdraw,set_approved_withdraw]=useState();
   const [rejected_withdraw,setrejected_withdraw]=useState();
   const [all_withdraw,set_allwithdraw]=useState();
-  const base_url = "http://localhost:8080";
+  const base_url = "https://ggwiwigamesbe.onrender.com";
   // ----------------deposit--------------------------
   const [pending_deposit,set_pending_deposit]=useState();
   const [success_deposit,set_success_deposit]=useState();

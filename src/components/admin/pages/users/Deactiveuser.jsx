@@ -41,7 +41,7 @@ const Deactiveuser = () => {
       </div>
     );
   }
-  const base_url = "http://localhost:8080";
+  const base_url = "https://ggwiwigamesbe.onrender.com";
 
       const [active_users,set_activeusers]=useState([]);
       const active_user_info=()=>{

@@ -8,7 +8,7 @@ import Header from '../../common/Header';
 import toast, { Toaster } from "react-hot-toast";
 
 const Allwithdraw = () => {
-  const base_url = "http://localhost:8080"; // Correct base URL
+  const base_url = "https://ggwiwigamesbe.onrender.com"; // Correct base URL
   const [withdrawals, setWithdrawals] = useState([]);
   const [searchQuery, setSearchQuery] = useState('');
 

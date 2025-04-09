@@ -8,7 +8,7 @@ import Header from '../../common/Header';
 import toast,{Toaster} from "react-hot-toast"
 
 const Alldeposit = () => {
-  const base_url = "http://localhost:8080"; // Correct base URL
+  const base_url = "https://ggwiwigamesbe.onrender.com"; // Correct base URL
   const [pending_deposit, set_pending_deposit] = useState([]);
   const [searchQuery, setSearchQuery] = useState('');
   const [withdrawals, setWithdrawals] = useState([]);

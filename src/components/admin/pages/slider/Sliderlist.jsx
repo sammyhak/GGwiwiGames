@@ -4,7 +4,7 @@ import toast, { Toaster } from "react-hot-toast";
 import Header from '../../common/Header';
 import { MdDelete } from "react-icons/md";
 const Allwithdraw = () => {
-  const base_url = "http://localhost:8080"; // Correct base URL for images
+  const base_url = "https://ggwiwigamesbe.onrender.com"; // Correct base URL for images
 
   const [banners, setBanners] = useState([]);
 

@@ -17,7 +17,7 @@ import Header from "../../../common/Header";
 const Userdetails = () => {
   const [user_detail,set_user_detail]=useState([]);
   const {id}=useParams();
-  const base_url = "http://localhost:8080";
+  const base_url = "https://ggwiwigamesbe.onrender.com";
 
   const user_info=()=>{
       axios.get(`${base_url}/admin/single-user-details/${id}`)

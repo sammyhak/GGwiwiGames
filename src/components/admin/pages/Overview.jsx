@@ -7,7 +7,7 @@ import DepositTable from "../admin_components/table/DepositTable";
 import axios from "axios";
 import Withdrawtable from "../admin_components/table/Withdrawtable";
 const Overview = () => {
-	  const base_url = "http://localhost:8080"; // Correct base URL
+	  const base_url = "https://ggwiwigamesbe.onrender.com"; // Correct base URL
 	  const [pending_deposit, set_pending_deposit] = useState([]);
   const [withdrawals, setWithdrawals] = useState([]);
 

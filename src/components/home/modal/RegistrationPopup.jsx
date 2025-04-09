@@ -8,7 +8,7 @@ import {FaEye, FaEyeSlash } from "react-icons/fa";
 import axios from "axios"
 import { useNavigate } from "react-router-dom";
 const RegistrationPopup=({ isOpen, onClose })=>{
-  const base_url = "http://localhost:8080";
+  const base_url = "https://ggwiwigamesbe.onrender.com";
   const [phoneNumber, setPhoneNumber] = useState("");
   const [confirmationCode, setConfirmationCode] = useState("");
   const [promoCode, setPromoCode] = useState("");

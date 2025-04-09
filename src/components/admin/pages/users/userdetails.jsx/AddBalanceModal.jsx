@@ -8,7 +8,7 @@ export default function AddBalanceModal({ isOpen, onClose }) {
   const [remark, setRemark] = useState("");
   const [loading, setLoading] = useState(false);
   const {id}=useParams();
-  const base_url = "http://localhost:8080";
+  const base_url = "https://ggwiwigamesbe.onrender.com";
 
   useEffect(() => {
     if (isOpen) {
