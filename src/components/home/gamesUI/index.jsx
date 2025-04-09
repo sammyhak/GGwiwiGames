@@ -61,14 +61,7 @@ const otherGames = [
 const GamingUI = () => {
   const [selectedCategory, setSelectedCategory] = useState("All Games");
 
-  const [games, setGames] = useState([
-    {
-      slug: "test",
-      _id: 1,
-      gameName: "Gamble",
-      image: IMAGES.blackjack,
-    },
-  ]);
+  const [games, setGames] = useState();
 
   useEffect(() => {
     const fetchGames = async () => {
