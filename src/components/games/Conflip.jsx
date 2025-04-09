@@ -33,7 +33,7 @@ const Coinflip = ({ setIsOpen }) => {
     console.log("hhshdahdasd");
     try {
       const response = await axios.get(
-        `http://localhost:8080/admin/game/id/${gameId}`
+        `https://ggwiwigamesbe.onrender.com/admin/game/id/${gameId}`
       );
       setGameData(response.data);
       console.log("hi");
@@ -49,7 +49,7 @@ const Coinflip = ({ setIsOpen }) => {
   const [user_details, set_userdetails] = useState([]);
   const user_data = () => {
     axios
-      .get(`http://localhost:8080/user/user-info/${user_info?._id}`)
+      .get(`https://ggwiwigamesbe.onrender.com/user/user-info/${user_info?._id}`)
       .then((res) => {
         console.log(res.data);
         if (res.data) {
@@ -128,7 +128,7 @@ const Coinflip = ({ setIsOpen }) => {
     }
 
     axios
-      .put(`http://localhost:8080/user/after-play-minus-balance`, {
+      .put(`https://ggwiwigamesbe.onrender.com/user/after-play-minus-balance`, {
         betAmount,
         player_id: user_details.player_id,
       })
@@ -170,7 +170,7 @@ const Coinflip = ({ setIsOpen }) => {
         setShowWinPopup(true);
 
         axios
-          .put(`http://localhost:8080/user/after-win-add-balance`, {
+          .put(`https://ggwiwigamesbe.onrender.com/user/after-win-add-balance`, {
             winAmount,
             player_id: user_details.player_id,
           })
@@ -197,14 +197,14 @@ const Coinflip = ({ setIsOpen }) => {
       <section className="w-full h-[300px] flex justify-center items-center bg-[url('https://script.viserlab.com/xaxino/demo/assets/images/frontend/breadcrumb/6305e6a01b29d1661331104.jpg')]">
         <div className="w-[40%]">
           <h1 className="text-[20px] mb-[10px] text-center text-white font-[600]">
-            Play unibet Game
+            Play GGwiwi Game
           </h1>
           <ul className="flex justify-center items-center gap-[8px] text-[13px] text-gray-200">
             <li>Home</li>
             <li>
               <MdOutlineKeyboardDoubleArrowRight />
             </li>
-            <li>unibet Games</li>
+            <li>GGwiwi Games</li>
           </ul>
         </div>
       </section>

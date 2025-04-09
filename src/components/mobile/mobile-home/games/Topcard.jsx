@@ -14,7 +14,7 @@ const Topcard = () => {
     const [categories, setCategories] = useState([
         { id: 1, image: 'https://v3.traincdn.com/genfiles/banners-admin-api/all/5096f38f1c66f0867eccae5e8e7cda6a.webp', title: 'ICC Champions Spin-Off' },
         { id: 2, image: 'https://v3.traincdn.com/genfiles/banners-admin-api/all/3cb66490572ca0d937aeb3feada3628a.webp', title: 'First deposit bonus!' },
-        { id: 3, image: 'https://v3.traincdn.com/genfiles/banners-admin-api/all/32ab23268c7c60efe88b4e654ef1e592.webp', title: 'MELBET ADVENTURE PARK' },
+        { id: 3, image: 'https://v3.traincdn.com/genfiles/banners-admin-api/all/32ab23268c7c60efe88b4e654ef1e592.webp', title: 'GGwiwiADVENTURE PARK' },
         { id: 4, image: 'https://v3.traincdn.com/genfiles/banners-admin-api/all/bf18455c0e4f65a79c59e34b5e8c51a0.webp', title: 'Fast Games Wins' },
         { id: 5, image: 'https://v3.traincdn.com/resized/size301x180/genfiles/slots/games/1380/img88531.jpeg', title: 'Grand Slam - Grand Win' },
         { id: 6, image: 'https://v3.traincdn.com/resized/size301x180/genfiles/slots/games/1085/img78166.jpeg', title: 'Cricket legend' }

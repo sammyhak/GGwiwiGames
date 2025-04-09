@@ -37,7 +37,7 @@ export default function Login() {
     if (!validate()) return;
     setLoading(true);
     try {
-      axios.post(`http://localhost:8080/auth/login`, formData)
+      axios.post(`https://ggwiwigamesbe.onrender.com/auth/login`, formData)
       .then((response) => {
         console.log(response);
         if (!response.data.success) {

@@ -11,7 +11,7 @@ export default function Carousel() {
     const fetchBanners = async () => {
       try {
         console.log("hello")
-        const response = await axios.get("http://localhost:8080/admin/banners"); // Update with your API endpoint
+        const response = await axios.get("https://ggwiwigamesbe.onrender.com/admin/banners"); // Update with your API endpoint
         setBanners(response.data.filenames || []); // Set filenames as banners
         console.log(response)
       } catch (error) {
@@ -43,7 +43,7 @@ export default function Carousel() {
         {banners.map((image, index) => (
           <img
             key={index}
-            src={`http://localhost:8080/images/${image}`} // Display image from server
+            src={`https://ggwiwigamesbe.onrender.com/images/${image}`} // Display image from server
             alt={`Slide ${index + 1}`}
             className={`absolute w-full h-[300px] lg:h-full transition-opacity duration-700 ${
               index === currentIndex ? "opacity-100" : "opacity-0"

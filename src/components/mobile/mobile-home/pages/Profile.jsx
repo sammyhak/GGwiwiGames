@@ -18,7 +18,7 @@ const Profile = () => {
   const fetchUserData = async () => {
     try {
       console.log("hello")
-       await axios.get(`http://localhost:8080/user/user-info/${user_info._id}`, {
+       await axios.get(`https://ggwiwigamesbe.onrender.com/user/user-info/${user_info._id}`, {
         headers: { Authorization: localStorage.getItem("token") },
       })
       .then((res)=>{

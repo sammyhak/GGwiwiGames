@@ -23,7 +23,7 @@ const Gamesdetails = () => {
   useEffect(() => {
     const fetchGame = async () => {
       try {
-        const response = await axios.get(`http://localhost:8080/admin/game/id/${id}`);
+        const response = await axios.get(`https://ggwiwigamesbe.onrender.com/admin/game/id/${id}`);
         const game = response.data;
         setFormData({
           gameName: game.gameName,
@@ -86,7 +86,7 @@ const Gamesdetails = () => {
     data.append("description", formData.description);
 
     try {
-      await axios.put(`http://localhost:8080/admin/update-game/${id}`, data);
+      await axios.put(`https://ggwiwigamesbe.onrender.com/admin/update-game/${id}`, data);
       toast.success("Game updated successfully!");
     } catch (error) {
       console.error(error);
@@ -121,7 +121,7 @@ const Gamesdetails = () => {
             >
               {formData.image ? (
                 <img
-                  src={formData.image instanceof File ? URL.createObjectURL(formData.image) : `http://localhost:8080/images/${formData.image}`}
+                  src={formData.image instanceof File ? URL.createObjectURL(formData.image) : `https://ggwiwigamesbe.onrender.com/images/${formData.image}`}
                   alt="Uploaded"
                   className="w-52 h-52 object-cover rounded-lg"
                 />

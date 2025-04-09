@@ -45,7 +45,7 @@ const Footer = () => {
         <div className="flex lg:flex-row flex-col gap-3 w-full text-[#c2c2c2]">
           <div className="p-4 text-[12px] lg:text-sm bg-[#212121] rounded-md">
             <p>
-              Melbet uses cookies to ensure the best user experience. By
+              GGwiwiuses cookies to ensure the best user experience. By
               remaining on the website, you consent to the use of your cookie
               files on Melbet.{" "}
               <Link>

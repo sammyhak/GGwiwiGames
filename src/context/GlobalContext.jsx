@@ -21,7 +21,7 @@ export const GlobalProvider = ({ children }) => {
    
    try {
      const response = await axios.get(
-       `http://localhost:8080/user/user-info/${storedUser._id}`
+       `https://ggwiwigamesbe.onrender.com/user/user-info/${storedUser._id}`
      );
      console.log(response.data)
      setUserDetails(response.data);

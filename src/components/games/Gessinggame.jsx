@@ -35,7 +35,7 @@ const Gessinggame = ({ setIsOpen }) => {
     console.log("hhshdahdasd");
     try {
       const response = await axios.get(
-        `http://localhost:8080/admin/game/id/${gameId}`
+        `https://ggwiwigamesbe.onrender.com/admin/game/id/${gameId}`
       );
       setGameData(response.data);
       console.log("hi");
@@ -51,7 +51,7 @@ const Gessinggame = ({ setIsOpen }) => {
   const [user_details, set_userdetails] = useState([]);
   const user_data = () => {
     axios
-      .get(`http://localhost:8080/user/user-info/${user_info?._id}`)
+      .get(`https://ggwiwigamesbe.onrender.com/user/user-info/${user_info?._id}`)
       .then((res) => {
         console.log(res.data);
         if (res.data) {
@@ -144,7 +144,7 @@ const Gessinggame = ({ setIsOpen }) => {
     }
 
     axios
-      .put(`http://localhost:8080/user/after-play-minus-balance`, {
+      .put(`https://ggwiwigamesbe.onrender.com/user/after-play-minus-balance`, {
         betAmount,
         player_id: user_details.player_id,
       })
@@ -185,7 +185,7 @@ const Gessinggame = ({ setIsOpen }) => {
         setShowWinPopup(true);
 
         axios
-          .put(`http://localhost:8080/user/after-win-add-balance`, {
+          .put(`https://ggwiwigamesbe.onrender.com/user/after-win-add-balance`, {
             winAmount,
             player_id: user_details.player_id,
           })

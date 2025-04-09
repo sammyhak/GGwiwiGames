@@ -75,7 +75,7 @@ export default function Registration() {
       setStep(3);
     } else if (step === 3) {
       axios
-        .post(`http://localhost:8080/auth/signup`, formData)
+        .post(`https://ggwiwigamesbe.onrender.com/auth/signup`, formData)
         .then((response) => {
           Swal.fire({
             icon: response.data.success ? "success" : "error",

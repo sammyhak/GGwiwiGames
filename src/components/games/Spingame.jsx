@@ -32,7 +32,7 @@ const Spingame = ({ setIsOpen }) => {
     const fetchGameData = async () => {
         console.log("hhshdahdasd")
         try {
-            const response = await axios.get(`http://localhost:8080/admin/game/id/${gameId}`);
+            const response = await axios.get(`https://ggwiwigamesbe.onrender.com/admin/game/id/${gameId}`);
             setGameData(response.data);
             console.log("hi")
             console.log("Game Data:", response.data);
@@ -46,7 +46,7 @@ const Spingame = ({ setIsOpen }) => {
     }, []);
     const [user_details,set_userdetails]=useState([])
     const user_data=()=>{
-      axios.get(`http://localhost:8080/user/user-info/${user_info?._id}`)
+      axios.get(`https://ggwiwigamesbe.onrender.com/user/user-info/${user_info?._id}`)
       .then((res)=>{
         console.log(res.data)
         if(res.data){
@@ -110,7 +110,7 @@ const Spingame = ({ setIsOpen }) => {
         return;
     }
 
-    axios.put(`http://localhost:8080/user/after-play-minus-balance`, { betAmount, player_id: user_details.player_id })
+    axios.put(`https://ggwiwigamesbe.onrender.com/user/after-play-minus-balance`, { betAmount, player_id: user_details.player_id })
         .then((res) => {
             console.log(res);
             user_data();
@@ -143,7 +143,7 @@ const Spingame = ({ setIsOpen }) => {
             setBalance(balance + winAmount);
             setShowWinPopup(true)
 
-            axios.put(`http://localhost:8080/user/after-win-add-balance`, { winAmount, player_id: user_details.player_id })
+            axios.put(`https://ggwiwigamesbe.onrender.com/user/after-win-add-balance`, { winAmount, player_id: user_details.player_id })
                 .then((res) => {
                     console.log(res);
                     user_data();

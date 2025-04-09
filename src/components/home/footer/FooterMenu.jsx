@@ -43,7 +43,7 @@ const FooterMenu = () => {
     <div className="p-4 text-sm text-white bg-[#212121] rounded-md">
       <div className="flex justify-around flex-wrap gap-6 w-full">
         <div className="space-y-2 hidden md:block">
-          <h2 className="text-md font-bold">MelBet</h2>
+          <h2 className="text-md font-bold">GGwiwi</h2>
           <div className="">
             <Link>
               <div className="p-0.5 text-sm hover:text-[#c2c2c2] duration-300">

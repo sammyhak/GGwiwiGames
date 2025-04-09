@@ -13,13 +13,14 @@ import Slots from "../mobile/mobile-home/games/Slots";
 import Livecasino from "../mobile/mobile-home/games/Livecasino";
 import Tvgames from "../mobile/mobile-home/games/Tvgames";
 import Livegames from "../mobile/mobile-home/games/Livegames";
+import GamingUI from "./gamesUI";
 
 const Home = () => {
   return (
     <section className="w-full  font-poppins">
       <TopBarMenu />
       {/* --------------computer-version---------------- */}
-      <section className="xl:flex w-full hidden justify-center">
+      <section className="xl:flex w-full justify-center">
         <div className="w-1/6 hidden md:block p-4">
           <Leftside />
         </div>
@@ -27,8 +28,9 @@ const Home = () => {
         <Rightside />
       </section>
       {/* ------------------mobile-version---------------------- */}
-      <section className="xl:hidden">
+      {/* <section className="xl:hidden">
         <Topcard />
+        <GamingUI />
         <LiveSportsNav />
         <Livematch />
         <Livegames />
@@ -36,7 +38,7 @@ const Home = () => {
         <Slots />
         <Livecasino />
         <Tvgames />
-      </section>
+      </section> */}
     </section>
   );
 };

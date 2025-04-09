@@ -14,7 +14,7 @@ const unibetgames = () => {
   useEffect(() => {
     const fetchGames = async () => {
       try {
-        const response = await axios.get("http://localhost:8080/admin/games");
+        const response = await axios.get("https://ggwiwigamesbe.onrender.com/admin/games");
         setGames(response.data);
       } catch (error) {
         console.error("Error fetching games:", error);
@@ -28,7 +28,7 @@ const unibetgames = () => {
     if (!window.confirm("Are you sure you want to delete this game?")) return;
     
     try {
-      await axios.delete(`http://localhost:8080/admin/delete-game/${gameId}`);
+      await axios.delete(`https://ggwiwigamesbe.onrender.com/admin/delete-game/${gameId}`);
       setGames(games.filter((game) => game._id !== gameId));
     } catch (error) {
       console.error("Error deleting game:", error);

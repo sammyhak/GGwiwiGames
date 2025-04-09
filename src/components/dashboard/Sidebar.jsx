@@ -16,7 +16,7 @@ const Sidebar = () => {
   const fetchUserData = async () => {
     try {
       console.log("hello")
-       await axios.get(`http://localhost:8080/user/user-info/${user_info._id}`)
+       await axios.get(`https://ggwiwigamesbe.onrender.com/user/user-info/${user_info._id}`)
       .then((res)=>{
         set_userdetails(res.data);
         console.log(res.data)

@@ -31,7 +31,7 @@ const Rightside = () => {
   }, [isCollapsed]);
 
   return (
-   <section className='p-2 w-[20%] h-[90vh] overflow-y-scroll custom-scrollbar'>
+   <section className='p-2 w-[20%] h-[90vh] overflow-y-scroll custom-scrollbar xl:flex hidden'>
     {
       user_info ?  <>
             <BetSlip/>

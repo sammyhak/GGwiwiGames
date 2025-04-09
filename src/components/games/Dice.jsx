@@ -11,17 +11,23 @@ import rollSound from "../../assets/second/rolling.mp3";
 import Loader from "./hook/Loader";
 import { useSearchParams } from "react-router-dom";
 // import { useWallet } from "../../../../../../client-bet-main/client-bet-main/src/context/wallet";
-import { createWithdrawalRequest, fetchUserBalance, fundWallet } from "../../services/wallet";
+import {
+  createWithdrawalRequest,
+  fetchUserBalance,
+  fundWallet,
+} from "../../services/wallet";
 import axios from "axios";
+import TopBarMenu from "../home/topBarMenu/TopBarMenu";
+import BottomNav from "../mobile/mobile-home/games/BottomNav";
 
 const Dice = () => {
-  const [balance, setBalance] = useState(0.5);
+  const [balance, setBalance] = useState(10000000000);
   const [betAmount, setBetAmount] = useState(0.0);
   const [rollValue, setRollValue] = useState(50.5);
   const [mul, setMul] = useState((2).toFixed(4));
   const [isBetStarted, setIsBetStarted] = useState(false);
   const [betResultArray, setBetResultArray] = useState([]);
-  const user_info=JSON.parse(localStorage.getItem("user"))
+  const user_info = JSON.parse(localStorage.getItem("user"));
   const [recentNumber, setRecentNumber] = useState(0);
   const [showDice, setShowDice] = useState(false);
   const diceTimeout = useRef(0);
@@ -35,7 +41,7 @@ const Dice = () => {
     console.log("hhshdahdasd");
     try {
       const response = await axios.get(
-        `http://localhost:8080/admin/game/id/${gameId}`
+        `https://ggwiwigamesbe.onrender.com/admin/game/id/${gameId}`
       );
       setGameData(response.data);
       console.log("hi");
@@ -51,11 +57,12 @@ const Dice = () => {
   const [user_details, set_userdetails] = useState([]);
   const user_data = () => {
     axios
-      .get(`http://localhost:8080/user/user-info/${user_info?._id}`)
+      .get(`https://ggwiwigamesbe.onrender.com/user/user-info/${user_info?._id}`)
       .then((res) => {
         console.log(res.data);
         if (res.data) {
           set_userdetails(res.data);
+          setBalance(res.data.balance?.toFixed(2))
           console.log(res.data);
         }
       })
@@ -78,8 +85,21 @@ const Dice = () => {
     }
   };
 
-const deposit = async (amount) => {
+  const deposit = async (amount) => {
+    alert(betResultArray?.win)
     try {
+      axios
+        .put(`https://ggwiwigamesbe.onrender.com/user/after-win-add-balance`, {
+          winAmount: 100,
+          player_id: user_details.player_id,
+        })
+        .then((res) => {
+          console.log(res);
+          user_data();
+        })
+        .catch((err) => {
+          console.log(err);
+        });
       await fundWallet(amount);
       fetchBalance();
       fetchUserTransactions();
@@ -90,9 +110,18 @@ const deposit = async (amount) => {
 
   const withdraw = async (amount) => {
     try {
-      await createWithdrawalRequest({ amount });
-      fetchBalance();
-      fetchUserTransactions();
+      axios
+        .put(`https://ggwiwigamesbe.onrender.com/user/after-play-minus-balance`, {
+          betAmount,
+          player_id: user_details.player_id,
+        })
+        .then((res) => {
+          console.log(res);
+          user_data();
+        })
+        .catch((err) => {
+          console.log(err);
+        });
     } catch (error) {
       throw error;
     }
@@ -141,11 +170,11 @@ const deposit = async (amount) => {
   }, [rollValue]);
 
   const handleBetClicked = () => {
-    if (!betAmount) {
+    if (betAmount < 1) {
       alert("Enter a valid bet amount");
       return;
     }
-    if (betAmount > totalAmount) {
+    if (betAmount > balance) {
       alert("Not Enough Money");
       return;
     }
@@ -201,6 +230,8 @@ const deposit = async (amount) => {
 
   return (
     <div className="bg-[#1a2c38] h-full min-h-screen pt-8 px-3">
+      <TopBarMenu />
+      <BottomNav />
       <Loader></Loader>
       <div className="bg-[#0f212e] max-w-screen-xl m-auto rounded-lg overflow-hidden  h-full">
         <div className="grid grid-cols-4 h-full">

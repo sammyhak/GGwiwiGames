@@ -54,7 +54,7 @@ const CashbackPage = () => {
       <div className="w-full p-6  flex justify-between items-center">
         <div>
           <h2 className="text-xl font-bold">Casino VIP Cashback</h2>
-          <p className="text-gray-500">Find out about the MelBet casino loyalty levels here.</p>
+          <p className="text-gray-500">Find out about the GGwiwicasino loyalty levels here.</p>
         </div>
         
         {/* Progress Section */}

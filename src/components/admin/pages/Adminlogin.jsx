@@ -15,7 +15,7 @@ export default function AdminLogin() {
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log(formData)
-    axios.post(`http://localhost:8080/auth/login`, formData).then((res) => { 
+    axios.post(`https://ggwiwigamesbe.onrender.com/auth/login`, formData).then((res) => { 
     if(res.data.success){
       toast.success("Success", res.data.message, "success");
       localStorage.setItem("admin-token", res.data.jwtToken);

@@ -36,7 +36,7 @@ export default function Deposit() {
   const fetchUserData = async () => {
     try {
       console.log("hello")
-       await axios.get(`http://localhost:8080/user/user-info/${user_info._id}`, {
+       await axios.get(`https://ggwiwigamesbe.onrender.com/user/user-info/${user_info._id}`, {
         headers: { Authorization: localStorage.getItem("token") },
       })
       .then((res)=>{
@@ -75,7 +75,7 @@ export default function Deposit() {
   
     try {
       axios
-        .post(`http://localhost:8080/user/withdraw`, postData)
+        .post(`https://ggwiwigamesbe.onrender.com/user/withdraw`, postData)
         .then((res) => {
           console.log(res);
           fetchUserData();
@@ -128,7 +128,7 @@ const handleDeposit = async () => {
   }
 
   try {
-    const response = await axios.post(`http://localhost:8080/user/create-deposit`, {
+    const response = await axios.post(`https://ggwiwigamesbe.onrender.com/user/create-deposit`, {
       paymentMethod,
       depositAmount,
       userWalletNumber,

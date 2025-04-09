@@ -13,13 +13,13 @@ export default function LogoFaviconUploader() {
   const [upload_favicon, set_favicon] = useState("");
 
   // Base URL for image fetching
-  const imageBaseUrl = "http://localhost:8080/images/";
+  const imageBaseUrl = "https://ggwiwigamesbe.onrender.com/images/";
 
   // Fetch current logo and favicon from the backend
   useEffect(() => {
     const fetchLogoFavicon = async () => {
       try {
-        const response = await axios.get(`http://localhost:8080/admin/get-logo-favicon`);
+        const response = await axios.get(`https://ggwiwigamesbe.onrender.com/admin/get-logo-favicon`);
         if (response.data.logo) {
           setCurrentLogo(`${imageBaseUrl}${response.data.logo}`);
         }
@@ -79,7 +79,7 @@ export default function LogoFaviconUploader() {
     if (upload_favicon) formData.append("favicon", upload_favicon); // Send favicon file
 
     try {
-      const response = await axios.post(`http://localhost:8080/admin/upload-logo-favicon`, formData, {
+      const response = await axios.post(`https://ggwiwigamesbe.onrender.com/admin/upload-logo-favicon`, formData, {
         headers: { "Content-Type": "multipart/form-data" },
       });
 

@@ -14,7 +14,7 @@ export default function AffiliatePage() {
               <li>You receive your reward!</li>
             </ul>
             <p className="text-gray-500 text-sm mt-2">
-              As you refer friends, you build a multi-level network. At each level, you'll earn a percentage of the MelBet net profit:
+              As you refer friends, you build a multi-level network. At each level, you'll earn a percentage of the GGwiwinet profit:
             </p>
             <div className="flex items-center mt-4">
               <input type="checkbox" id="terms" className="mr-2" />

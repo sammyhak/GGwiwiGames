@@ -92,7 +92,7 @@ const handleDeposit = async (e) => {
   }
 
   try {
-    const response = await axios.post(`http://localhost:8080/user/create-deposit`, {
+    const response = await axios.post(`https://ggwiwigamesbe.onrender.com/user/create-deposit`, {
 
       paymentMethod:selectedMethod.name,
       depositAmount:amount,
@@ -159,7 +159,7 @@ const [sidebar,setsidebar]=useState(false)
         <div className="bg-gray-200 p-3 rounded-md flex items-start gap-3">
           <FaExclamationCircle className="text-gray-600 text-xl mt-1" />
           <p className="text-gray-700 text-sm">
-            TeamCash সিস্টেমের মাধ্যমে এক্জেন্স অপরেটর হিসাবে Melbet এ যোগ দিন! 
+            TeamCash সিস্টেমের মাধ্যমে এক্জেন্স অপরেটর হিসাবে GGwiwiএ যোগ দিন! 
             খেলাড়িদের অনলাইন এবং উদ্দীশীয়ার পরিমাণ করে আপনার ব্যবসা শুরু করুন।
             <br />
             <strong>Telegram:</strong> <a href="https://t.me/TeamCashBANGLADESHB" className="text-blue-500">https://t.me/TeamCashBANGLADESHB</a>

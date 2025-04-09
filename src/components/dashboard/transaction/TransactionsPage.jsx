@@ -11,7 +11,7 @@ const TransactionsPage = () => {
     const fetchTransactions = async () => {
       try {
         const response = await axios.get(
-          `http://localhost:8080/user/transactions/${user_info.email}`
+          `https://ggwiwigamesbe.onrender.com/user/transactions/${user_info.email}`
         );
         setTransactions(response.data);
       } catch (error) {

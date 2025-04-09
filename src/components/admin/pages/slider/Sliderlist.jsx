@@ -12,7 +12,7 @@ const Allwithdraw = () => {
   useEffect(() => {
     const fetchBanners = async () => {
       try {
-        const response = await axios.get("http://localhost:8080/admin/banners"); // Correct the URL
+        const response = await axios.get("https://ggwiwigamesbe.onrender.com/admin/banners"); // Correct the URL
         setBanners(response.data.filenames || []);
       } catch (error) {
         console.error("Error fetching banners:", error);
@@ -26,7 +26,7 @@ const Allwithdraw = () => {
  const handleDeleteImage = async (imageName) => {
     try {
       // Call the delete API route
-      const response = await axios.delete(`http://localhost:8080/admin/banners/${imageName}`);
+      const response = await axios.delete(`https://ggwiwigamesbe.onrender.com/admin/banners/${imageName}`);
       if (response.status === 200) {
         toast.success("Image deleted successfully");
         setBanners((prevBanners) => prevBanners.filter((banner) => banner !== imageName));

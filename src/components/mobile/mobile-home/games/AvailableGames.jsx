@@ -9,7 +9,7 @@ const AvailableGames = () => {
   useEffect(() => {
     const fetchGames = async () => {
       try {
-        const response = await axios.get("http://localhost:8080/admin/games");
+        const response = await axios.get("https://ggwiwigamesbe.onrender.com/admin/games");
         setGames(response.data);
       } catch (error) {
         console.error("Error fetching games:", error);
@@ -34,7 +34,7 @@ const AvailableGames = () => {
             className="relative rounded-lg overflow-hidden  bg-gray-900 p-2 cursor-pointer"
           >
             <img
-              src={`http://localhost:8080/images/${game.image}`} // Fetch image from backend
+              src={`https://ggwiwigamesbe.onrender.com/images/${game.image}`} // Fetch image from backend
               alt={game.gameName}
               className="w-full hover:scale-[1.1] transition-all duration-150 h-[250px] object-cover rounded-lg"
             />

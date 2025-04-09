@@ -35,7 +35,7 @@ export default function Rockgame() {
     const fetchGameData = async () => {
         console.log("hhshdahdasd")
         try {
-            const response = await axios.get(`http://localhost:8080/admin/game/id/${gameId}`);
+            const response = await axios.get(`https://ggwiwigamesbe.onrender.com/admin/game/id/${gameId}`);
             setGameData(response.data);
             console.log("hi")
             console.log("Game Data:", response.data);
@@ -58,7 +58,7 @@ export default function Rockgame() {
     };
     const [user_details,set_userdetails]=useState([])
     const user_data=()=>{
-      axios.get(`http://localhost:8080/user/user-info/${user_info?._id}`)
+      axios.get(`https://ggwiwigamesbe.onrender.com/user/user-info/${user_info?._id}`)
       .then((res)=>{
         console.log(res.data)
         if(res.data){
@@ -109,7 +109,7 @@ export default function Rockgame() {
             return;
         }
     
-        axios.put(`http://localhost:8080/user/after-play-minus-balance`, { betAmount, player_id: user_details.player_id })
+        axios.put(`https://ggwiwigamesbe.onrender.com/user/after-play-minus-balance`, { betAmount, player_id: user_details.player_id })
             .then((res) => {
                 console.log(res);
                 user_data();
@@ -149,7 +149,7 @@ export default function Rockgame() {
                 const winAmount = betAmount * 1.2; // 20% extra on win
                 setBalance(balance + winAmount);  // Update balance with the win amount
                 setNewTotalAmount(balance + winAmount); // Set the new total amount in the new state
-                axios.put(`http://localhost:8080/user/after-wind-add-balance`, { winAmount, player_id: user_details.player_id })
+                axios.put(`https://ggwiwigamesbe.onrender.com/user/after-wind-add-balance`, { winAmount, player_id: user_details.player_id })
                 .then((res) => {
                     console.log(res);
                     user_data();

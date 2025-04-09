@@ -42,7 +42,7 @@ const LoginPopup = ({ onClose }) => {
     if (!validate()) return;
     setLoading(true);
     try {
-      const response = await axios.post(`http://localhost:8080/auth/login`, formData);
+      const response = await axios.post(`https://ggwiwigamesbe.onrender.com/auth/login`, formData);
       if (!response.data.success) {
         toast.error(response.data.message);
         alert(response.data.message)
