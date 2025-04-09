@@ -293,13 +293,13 @@ const handleDeposit = async () => {
               value={transactionId}
               onChange={(e) => setTransactionId(e.target.value)}
             />
-            <p className="mt-2">How to make a deposit</p>
-            <iframe
+            {/* <p className="mt-2">How to make a deposit</p> */}
+            {/* <iframe
               className="w-full mt-2"
               height="180"
               src="https://www.youtube.com/embed/aCDAdyLKcyE?si=Lo6BICP002DGCxix"
               title="How to deposit"
-            ></iframe>
+            ></iframe> */}
             <button
               className="w-full bg-green-600 text-white p-2 mt-4 rounded"
               onClick={handleDeposit}

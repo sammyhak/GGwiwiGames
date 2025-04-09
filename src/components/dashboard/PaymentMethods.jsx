@@ -247,7 +247,7 @@ const [sidebar,setsidebar]=useState(false)
           <input type="text" placeholder="Transaction ID" className="w-full border p-2 mb-3" value={transactionId} onChange={(e) => setTransactionId(e.target.value)} />
           <button type="submit" className="w-full bg-indigo-600 text-white py-2 rounded-md">Confirm</button>
           <div className="mt-4">
-            <iframe className="w-full h-40" src="https://www.youtube.com/embed/aCDAdyLKcyE?si=Lo6BICP002DGCxix" title="Nagad Deposit Tutorial" allowFullScreen></iframe>
+            {/* <iframe className="w-full h-40" src="https://www.youtube.com/embed/aCDAdyLKcyE?si=Lo6BICP002DGCxix" title="Nagad Deposit Tutorial" allowFullScreen></iframe> */}
           </div>
         </div>
       </form>
@@ -280,7 +280,7 @@ const [sidebar,setsidebar]=useState(false)
           <input type="text" placeholder="Transaction ID"onChange={(e)=>{setTransactionId(e.target.value)}} className="w-full border p-2 mb-3" />
           <button className="w-full bg-indigo-600 text-white py-2 rounded-md">Confirm</button>
           <div className="mt-4">
-            <iframe className="w-full h-40" src="https://www.youtube.com/embed/aCDAdyLKcyE?si=Lo6BICP002DGCxix" title="Bkash Deposit Tutorial" allowFullScreen></iframe>
+            {/* <iframe className="w-full h-40" src="https://www.youtube.com/embed/aCDAdyLKcyE?si=Lo6BICP002DGCxix" title="Bkash Deposit Tutorial" allowFullScreen></iframe> */}
           </div>
         </div>
       </form>
