@@ -318,11 +318,11 @@ const TopBarMenu = () => {
             </div>
           </div>
         </div>
-        <div>
+        {/* <div>
           <button className="px-[10px] py-[8px] bg-black text-[13px] cursor-pointer text-white rounded-[8px]">
             Download
           </button>
-        </div>
+        </div> */}
       </div>
       <div className="flex xl:hidden  items-center justify-between py-[15px] bg-[#212121] px-3 w-full">
         <div className="text-white font-bold text-lg">
