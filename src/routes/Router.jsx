@@ -45,7 +45,7 @@ import Conflip from "../components/games/Conflip";
 import Spingame from "../components/games/Spingame";
 import Gamelogs from "../components/admin/pages/unibetgames/Gamelogs";
 import Gamesdetails from "../components/admin/pages/unibetgames/Gamesdetails";
-import unibetgames from "../components/admin/pages/unibetgames/unibetgames";
+// import unibetgames from "../components/admin/pages/unibetgames/unibetgames";
 import Generalsettings from "../components/admin/pages/setting/Generalsettings";
 import Addgame from "../components/admin/pages/unibetgames/Addgame";
 import Dice from "../components/games/Dice";
