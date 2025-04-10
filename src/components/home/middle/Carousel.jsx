@@ -10,10 +10,12 @@ export default function Carousel() {
   useEffect(() => {
     const fetchBanners = async () => {
       try {
-        console.log("hello")
-        const response = await axios.get("https://ggwiwigamesbe.onrender.com/admin/banners"); // Update with your API endpoint
+        console.log("hello");
+        const response = await axios.get(
+          "https://ggwiwigamesbe.onrender.com/admin/banners"
+        ); // Update with your API endpoint
         setBanners(response.data.filenames || []); // Set filenames as banners
-        console.log(response)
+        console.log(response);
       } catch (error) {
         console.error("Error fetching banners:", error);
       }
@@ -23,11 +25,15 @@ export default function Carousel() {
   }, []);
 
   const prevSlide = () => {
-    setCurrentIndex((prevIndex) => (prevIndex === 0 ? banners.length - 1 : prevIndex - 1));
+    setCurrentIndex((prevIndex) =>
+      prevIndex === 0 ? banners.length - 1 : prevIndex - 1
+    );
   };
 
   const nextSlide = () => {
-    setCurrentIndex((prevIndex) => (prevIndex === banners.length - 1 ? 0 : prevIndex + 1));
+    setCurrentIndex((prevIndex) =>
+      prevIndex === banners.length - 1 ? 0 : prevIndex + 1
+    );
   };
 
   useEffect(() => {
@@ -48,6 +54,7 @@ export default function Carousel() {
             className={`absolute w-full h-[300px] lg:h-full transition-opacity duration-700 ${
               index === currentIndex ? "opacity-100" : "opacity-0"
             }`}
+            style={{ objectFit: "cover" }}
           />
         ))}
       </div>
@@ -69,7 +76,9 @@ export default function Carousel() {
             key={index}
             onClick={() => setCurrentIndex(index)}
             className={`cursor-pointer transition-all duration-300 rounded-full ${
-              index === currentIndex ? "w-6 h-2 bg-white rounded-xl" : "w-2 h-2 bg-gray-400"
+              index === currentIndex
+                ? "w-6 h-2 bg-white rounded-xl"
+                : "w-2 h-2 bg-gray-400"
             }`}
           ></div>
         ))}

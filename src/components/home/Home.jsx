@@ -21,7 +21,7 @@ const Home = () => {
       <TopBarMenu />
       {/* --------------computer-version---------------- */}
       <section className="xl:flex w-full justify-center">
-        <div className="w-1/6 hidden md:block p-4">
+        <div className="w-1/6 hidden md:block">
           <Leftside />
         </div>
         <Mainpage />

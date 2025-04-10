@@ -10,7 +10,7 @@ import toast,{ Toaster } from "react-hot-toast"; // Assuming you are using react
 import { useNavigate } from "react-router-dom";
 
 const LoginPopup = ({ onClose }) => {
-  const [activeTab, setActiveTab] = useState("phone");
+  const [activeTab, setActiveTab] = useState("email");
   const navigate=useNavigate();
   // Form data and states
   const [formData, setFormData] = useState({ email: "", password: "" });
@@ -79,7 +79,7 @@ const LoginPopup = ({ onClose }) => {
           </button>
         </div>
         <div className="mt-4">
-          <div className="grid grid-cols-3 mb-4 bg-gray-200">
+          {/* <div className="grid grid-cols-3 mb-4 bg-gray-200">
             <button
               className={`py-[8px] text-center text-[16px] font-[500] cursor-pointer border-r-[1px] border-white hover:bg-gray-700 hover:text-white ${activeTab === "phone" ? "bg-[#2E2E2E] text-white shadow font-[500]" : ""}`}
               onClick={() => setActiveTab("phone")}
@@ -99,7 +99,7 @@ const LoginPopup = ({ onClose }) => {
             >
               <BiSolidMessageRounded className="inline mr-1" /> By SMS
             </button>
-          </div>
+          </div> */}
           <form onSubmit={handleSubmit}>
             <div className="mt-4">
               {activeTab === "email" && (

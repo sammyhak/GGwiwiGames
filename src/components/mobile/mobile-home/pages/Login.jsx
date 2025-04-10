@@ -81,7 +81,7 @@ export default function Login() {
           <h2 className="text-[16px] font-[600]">Log In</h2>
         </div>
 
-        <div className=" border-b border-gray-200 grid grid-cols-4 px-[10px] gap-1 py-[10px]">
+        {/* <div className=" border-b border-gray-200 grid grid-cols-4 px-[10px] gap-1 py-[10px]">
           {[{ id: "phone", icon: <FaPhone /> }, { id: "one-click", icon: <FaBolt /> }, { id: "email", icon: <FaEnvelope /> }, { id: "socials", icon: <FaUsers /> }].map((method) => (
            <>
               {
@@ -108,7 +108,7 @@ export default function Login() {
               }
            </>
           ))}
-        </div>
+        </div> */}
 {/* ---------------login-form------------------ */}
 {
   selectedMethod=="email" ? <div className="">

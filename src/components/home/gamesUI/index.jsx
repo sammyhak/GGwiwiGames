@@ -114,19 +114,20 @@ const GamingUI = () => {
           "Top Games",
           "Providers",
         ].map((category, index) => (
-          <Glowcard
-            show={selectedCategory === category}
-            color="bg-primary border-primary text-white"
-            size="5rem"
-          >
-            <button
-              key={index}
-              className=" px-4 py-2 rounded-lg whitespace-nowrap "
-              onClick={() => setSelectedCategory(category)}
-            >
-              {category}
-            </button>
-          </Glowcard>
+          // <Glowcard
+          //   show={selectedCategory === category}
+          //   color="bg-primary border-primary text-white"
+          //   size="5rem"
+          // >
+          //   <button
+          //     key={index}
+          //     className=" px-4 py-2 rounded-lg whitespace-nowrap "
+          //     onClick={() => setSelectedCategory(category)}
+          //   >
+          //     {category}
+          //   </button>
+          // </Glowcard>
+          <></>
         ))}
       </div>
       <div className="uppercase mb-2 text-white">{selectedCategory}</div>

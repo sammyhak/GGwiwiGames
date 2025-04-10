@@ -31,20 +31,21 @@ const Rightside = () => {
   }, [isCollapsed]);
 
   return (
-   <section className='p-2 w-[20%] h-[90vh] overflow-y-scroll custom-scrollbar xl:flex hidden'>
-    {
-      user_info ?  <>
-            <BetSlip/>
+    <></>
+  //  <section className='p-2 w-[20%] h-[90vh] overflow-y-scroll custom-scrollbar xl:flex hidden'>
+  //   {
+  //     user_info ?  <>
+  //           <BetSlip/>
 
-      <AppBanner/>
-      </>:<>
-            <RegistrationBox/>
-            <BetSlip/>
-            <AppBanner/>
-      </>
-    }
+  //     <AppBanner/>
+  //     </>:<>
+  //           <RegistrationBox/>
+  //           <BetSlip/>
+  //           <AppBanner/>
+  //     </>
+  //   }
 
-   </section>
+  //  </section>
 //   <div
 //   className={` h-screen bg-black flex flex-col  items-center transition-all ${
 //     isCollapsed ? "" : "px-[5px]"

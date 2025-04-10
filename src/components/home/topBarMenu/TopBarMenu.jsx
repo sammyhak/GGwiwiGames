@@ -30,42 +30,43 @@ import { FaCloudDownloadAlt } from "react-icons/fa";
 import { IoMdClose } from "react-icons/io";
 import toast, { Toaster } from "react-hot-toast";
 const menuItems = [
-  { name: "SPORTS", subMenu: ["Football", "Basketball", "Tennis"] },
-  {
-    name: "LIVE",
-    subMenu: ["Live Football", "Live Tennis", "Live Basketball"],
-  },
-  {
-    name: "FAST GAMES",
-    subMenu: [
-      "Crash",
-      "Crystal",
-      "Western slot",
-      "Midgard Zombies",
-      "21",
-      "Under and Over 7",
-      "Solitaire",
-      "Vampire Curse",
-      "Burning Hot",
-      "Mayan Tomb",
-      "Scratch Card",
-      "Las Vegas",
-      "Apple Of Fortune",
-      "Fruit Cocktail",
-      "Gems Odyssey",
-    ],
-  },
-  { name: "SLOTS", subMenu: ["Classic Slots", "Video Slots", "Jackpot Slots"] },
+  { name: "All Games", subMenu: ["Rock, Paper", "Coin Flip", "Roll", "Dice Duel", "Guess The Number"] },
+  // { name: "SPORTS", subMenu: ["Football", "Basketball", "Tennis"] },
+  // {
+  //   name: "LIVE",
+  //   subMenu: ["Live Football", "Live Tennis", "Live Basketball"],
+  // },
+  // {
+  //   name: "FAST GAMES",
+  //   subMenu: [
+  //     "Crash",
+  //     "Crystal",
+  //     "Western slot",
+  //     "Midgard Zombies",
+  //     "21",
+  //     "Under and Over 7",
+  //     "Solitaire",
+  //     "Vampire Curse",
+  //     "Burning Hot",
+  //     "Mayan Tomb",
+  //     "Scratch Card",
+  //     "Las Vegas",
+  //     "Apple Of Fortune",
+  //     "Fruit Cocktail",
+  //     "Gems Odyssey",
+  //   ],
+  // },
+  // { name: "SLOTS", subMenu: ["Classic Slots", "Video Slots", "Jackpot Slots"] },
   { name: "LIVE CASINO", subMenu: ["Roulette", "Blackjack", "Baccarat"] },
-  { name: "ESPORTS", subMenu: ["CS:GO", "Dota 2", "League of Legends"] },
-  { name: "PROMO", subMenu: ["Welcome Bonus", "Weekly Cashback"] },
-  { name: "BINGO", subMenu: ["90 Ball Bingo", "75 Ball Bingo"] },
-  { name: "MORE", subMenu: ["Virtual Sports", "TV Games"] },
+  // { name: "ESPORTS", subMenu: ["CS:GO", "Dota 2", "League of Legends"] },
+  // { name: "PROMO", subMenu: ["Welcome Bonus", "Weekly Cashback"] },
+  // { name: "BINGO", subMenu: ["90 Ball Bingo", "75 Ball Bingo"] },
+  // { name: "MORE", subMenu: ["Virtual Sports", "TV Games"] },
 ];
 
 const links = [
-  { name: "App", url: "/app", icon: null },
-  { name: "12000 BDT bonus", url: "/bonus", icon: <FaGift /> },
+  // { name: "App", url: "/app", icon: null },
+  // { name: "12000 BDT bonus", url: "/bonus", icon: <FaGift /> },
 ];
 
 const socialLinks = [

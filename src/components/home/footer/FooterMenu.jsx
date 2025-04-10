@@ -167,11 +167,11 @@ const FooterMenu = () => {
           </div>
         </div>
 
-        <div className="space-y-2 w-full lg:w-auto">
+        {/* <div className="space-y-2 w-full lg:w-auto">
           <h2 className="text-md font-bold">Apps</h2>
-          <div className="w-full">
+          <div className="w-full"> */}
             {/* Tab Buttons */}
-            <div className="flex bg-[#1a1a1a] rounded-md overflow-hidden">
+            {/* <div className="flex bg-[#1a1a1a] rounded-md overflow-hidden">
               {tabs.map((tab, index) => (
                 <button
                   key={index}
@@ -185,10 +185,10 @@ const FooterMenu = () => {
                   {tab.icon} {tab.name}
                 </button>
               ))}
-            </div>
+            </div> */}
 
             {/* Dynamic Content */}
-            <div className="p-4 mt-2 flex items-center gap-3 bg-[#1a1a1a] rounded-md">
+            {/* <div className="p-4 mt-2 flex items-center gap-3 bg-[#1a1a1a] rounded-md">
               {tabs[activeTab].content.qr && (
                 <img
                   className="bg-amber-50 w-20"
@@ -209,9 +209,9 @@ const FooterMenu = () => {
                   {tabs[activeTab].content.downloadText}
                 </a>
               </div>
-            </div>
-          </div>
-        </div>
+            </div> */}
+          {/* </div>
+        </div> */}
       </div>
     </div>
   );

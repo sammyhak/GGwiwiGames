@@ -35,9 +35,9 @@ const RegistrationPopup=({ isOpen, onClose })=>{
     alert(`Confirmation code entered: ${confirmationCode}`);
   }
   const bonuses = [
-    { id: 'sports', title: 'Bonus for sports betting', description: 'Welcome bonus on your 1st deposit up to 12000 BDT' },
-    { id: 'casino', title: 'Casino + Fast Games', description: 'Welcome package up to 446000 BDT + 220 FS' },
-    { id: 'reject', title: 'Reject bonuses', description: 'Make your selection later' }
+    // { id: 'sports', title: 'Bonus for sports betting', description: 'Welcome bonus on your 1st deposit up to 12000 BDT' },
+    // { id: 'casino', title: 'Casino + Fast Games', description: 'Welcome package up to 446000 BDT + 220 FS' },
+    // { id: 'reject', title: 'Reject bonuses', description: 'Make your selection later' }
   ];
 // -------------------------------emial-registration----------------------
 const validateEmail = (email) => {
@@ -88,7 +88,7 @@ if (!isOpen) return null;
         </button>
         <h2 className="text-[19px] font-[600] text-center mb-4">REGISTRATION</h2>
 
-        <div className="grid grid-cols-4 mb-4  bg-gray-200 ">
+        {/* <div className="grid grid-cols-4 mb-4  bg-gray-200 ">
           <button className={`py-[8px] text-center text-[13px] lg:text-[15px] font-[400] cursor-pointer border-r-[1px] border-white hover:bg-gray-700 hover:text-white  ${activeTab === "phone" ? "bg-[#2E2E2E] text-white shadow font-[500]" : ""}`} onClick={() => setActiveTab("phone")}>
             <MdPhoneAndroid className="inline mr-1" /> By phone
           </button>
@@ -101,7 +101,7 @@ if (!isOpen) return null;
           <button className={`py-[5px] text-center text-[13px] lg:text-[15px] font-[500] cursor-pointer hover:bg-gray-700 hover:text-white ${activeTab === "socials" ? "bg-[#2E2E2E] text-white shadow font-[500]" : ""}`} onClick={() => setActiveTab("socials")}>
             <FaUsers className="inline mr-1" /> Socials
           </button>
-        </div>
+        </div> */}
          {
           activeTab=="phone" ? <form>
           
@@ -223,14 +223,14 @@ if (!isOpen) return null;
                    
                    <form onSubmit={handleSubmit} className="w-full bg-white text-gray-800 z-[1000000000]">
                    {/* Bonus Selection */}
-                   <div className="w-full mb-[20px] bg-[#F9F9F9] p-2">
-                     <div
+                   <div className=""> {/*w-full mb-[20px] bg-[#F9F9F9] p-2 */}
+                     {/* <div
                        className="flex justify-between items-center cursor-pointer"
                        onClick={() => setDropdownOpen(!dropdownOpen)}
                      >
                        <h3 className="text-[16px] font-semibold mb-3 text-gray-800">Choose a welcome bonus</h3>
                        {dropdownOpen ? <FaChevronUp /> : <FaChevronDown />}
-                     </div>
+                     </div> */}
                      <div
                        className={`transition-all duration-500 overflow-hidden ${dropdownOpen ? 'max-h-screen' : 'max-h-0'}`}
                      >
