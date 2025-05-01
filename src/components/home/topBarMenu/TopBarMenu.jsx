@@ -30,7 +30,26 @@ import { FaCloudDownloadAlt } from "react-icons/fa";
 import { IoMdClose } from "react-icons/io";
 import toast, { Toaster } from "react-hot-toast";
 const menuItems = [
-  { name: "All Games", subMenu: ["Rock, Paper", "Coin Flip", "Roll", "Dice Duel", "Guess The Number"] },
+  {
+    name: "All Games",
+    subMenu: [
+      "Rock, Paper",
+      "Coin Flip",
+      "Roll",
+      "Dice Duel",
+      "Guess The Number",
+      "BlackjackGame",
+      "CrashGame",
+      "GoalGame",
+      "HiloGame",
+      "HiloMGame",
+      "MineGame",
+      "RouletteGame",
+      "SlideGame",
+      "VideoPoker",
+    ],
+  },
+
   // { name: "SPORTS", subMenu: ["Football", "Basketball", "Tennis"] },
   // {
   //   name: "LIVE",
@@ -96,9 +115,12 @@ const TopBarMenu = () => {
     try {
       console.log("hello");
       await axios
-        .get(`https://ggwiwigamesbe.onrender.com/user/user-info/${user_info._id}`, {
-          headers: { Authorization: localStorage.getItem("token") },
-        })
+        .get(
+          `https://ggwiwigamesbe.onrender.com/user/user-info/${user_info._id}`,
+          {
+            headers: { Authorization: localStorage.getItem("token") },
+          }
+        )
         .then((res) => {
           set_userdetails(res.data);
           console.log(res.data);
@@ -303,12 +325,12 @@ const TopBarMenu = () => {
             : "flex justify-between items-center lg:hidden bg-[#FFB805]  border-b-[2px] border-white px-[10px] py-[8px]"
         }
       > */}
-        {/* <div className="flex justify-center items-center gap-[10px]"> */}
-          {/* <button onClick={handlepopup} className="text-[20px] cursor-pointer">
+      {/* <div className="flex justify-center items-center gap-[10px]"> */}
+      {/* <button onClick={handlepopup} className="text-[20px] cursor-pointer">
             <IoMdClose />
           </button> */}
-          {/* <img className="w-[40px] rounded-[3px]" src={square_img} alt="" /> */}
-          {/* <div>
+      {/* <img className="w-[40px] rounded-[3px]" src={square_img} alt="" /> */}
+      {/* <div>
             <h2 className="font-[600] uppercase mb-[3px]">GGwiwi Hub</h2>
             <div className="flex justify-center items-center text-green-600 gap-[4px]">
               <IoIosStar />
@@ -318,8 +340,8 @@ const TopBarMenu = () => {
               <IoIosStar />
             </div>
           </div> */}
-        {/* </div> */}
-        {/* <div>
+      {/* </div> */}
+      {/* <div>
           <button className="px-[10px] py-[8px] bg-black text-[13px] cursor-pointer text-white rounded-[8px]">
             Download
           </button>

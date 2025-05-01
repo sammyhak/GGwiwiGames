@@ -41,7 +41,7 @@ let featuredGames = [
 
 const otherGames = [
   {
-    name: "Blackjack",
+    name: "BlackjackGame",
     img: IMAGES.blackjack,
     color: "bg-black border-black",
   },
@@ -52,10 +52,34 @@ const otherGames = [
     img: IMAGES.case_battle,
     color: "bg-yellow-600 border-yellow-600",
   },
-  { name: "Crash", img: IMAGES.crash, color: "bg-primary border-primary" },
+  { name: "CrashGame", img: IMAGES.crash, color: "bg-primary border-primary" },
   { name: "Roll", img: IMAGES.roll, color: "bg-yellow-500 border-yellow-500" },
   { name: "Dice Duel", img: IMAGES.dice, color: "bg-primary border-primary" },
-  { name: "Bacarat", img: IMAGES.bacarat, color: "bg-primary border-primary" },
+  { name: "BaccaratGame", img: IMAGES.bacarat, color: "bg-primary border-primary" },
+  {
+    name: "BlackjackGame",
+    img: IMAGES.blackjack,
+    color: "bg-primary border-primary",
+  },
+  {
+    name: "GoalGame",
+    img: IMAGES.Glowcard,
+    color: "bg-primary border-primary",
+  },
+  { name: "HiloGame", img: IMAGES.hero1, color: "bg-primary border-primary" },
+  { name: "HiloMGame", img: IMAGES.hero2, color: "bg-primary border-primary" },
+  { name: "MineGame", img: IMAGES.hero3, color: "bg-primary border-primary" },
+  {
+    name: "RouletteGame",
+    img: IMAGES.rocket,
+    color: "bg-primary border-primary",
+  },
+  {
+    name: "SlideGame",
+    img: IMAGES.case_battle,
+    color: "bg-primary border-primary",
+  },
+  { name: "VideoPoker", img: IMAGES.roll, color: "bg-primary border-primary" },
 ];
 
 const GamingUI = () => {
@@ -66,7 +90,9 @@ const GamingUI = () => {
   useEffect(() => {
     const fetchGames = async () => {
       try {
-        const response = await axios.get("https://ggwiwigamesbe.onrender.com/admin/games");
+        const response = await axios.get(
+          "https://ggwiwigamesbe.onrender.com/admin/games"
+        );
         setGames(response.data);
       } catch (error) {
         console.error("Error fetching games:", error);
@@ -150,7 +176,9 @@ const GamingUI = () => {
       <div className="uppercase mb-2 text-white">Other games</div>
       <div className="grid grid-cols-2 md:grid-cols-5 gap-2 mb-6">
         {otherGames.map((game, index) => (
-          <GameCard key={index} {...game} />
+          <a href={`${game.name}`}>
+            <GameCard key={index} {...game} />
+          </a>
         ))}
       </div>
     </div>
