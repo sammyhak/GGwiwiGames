@@ -305,7 +305,7 @@ const TopBarMenu = () => {
                   </div>
                 ))}
                 <div className="text-red-500 font-[600] ml-[15px]">
-                  <NavLink to="/unibet-sports">GGwiwi 🔥</NavLink>
+                  <NavLink to="/unibet-sports">99wiwi 🔥</NavLink>
                 </div>
               </div>
 
@@ -331,7 +331,7 @@ const TopBarMenu = () => {
           </button> */}
       {/* <img className="w-[40px] rounded-[3px]" src={square_img} alt="" /> */}
       {/* <div>
-            <h2 className="font-[600] uppercase mb-[3px]">GGwiwi Hub</h2>
+            <h2 className="font-[600] uppercase mb-[3px]">99wiwi Hub</h2>
             <div className="flex justify-center items-center text-green-600 gap-[4px]">
               <IoIosStar />
               <IoIosStar />

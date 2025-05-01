@@ -3,7 +3,7 @@ import { ChevronDown, ChevronUp } from "lucide-react";
 
 const faqs = [
   {
-    question: "GGwiwi betting on Sports",
+    question: "99wiwi betting on Sports",
   },
 ];
 
@@ -39,7 +39,7 @@ export default function FAQ() {
                     lotteries.
                   </p>
                   <p className="">
-                    GGwiwi bookmaker welcomes all enthusiasts who bet on sports,
+                    99wiwi bookmaker welcomes all enthusiasts who bet on sports,
                     as well as those who are just getting to know it. We provide
                     our bettors with a wide selection of matches in dozens of
                     sports on which you can place bets. The line presents
@@ -47,7 +47,7 @@ export default function FAQ() {
                     volleyball, as well as other sports. Gamblers can bet on
                     pre-match and live matches. Promos and bonuses make your
                     starting journey easier; for even greater convenience you
-                    can download mobile app GGwiwi to access betting through
+                    can download mobile app 99wiwi to access betting through
                     your smartphone.
                   </p>
                   <h2 className="font-bold">
@@ -55,7 +55,7 @@ export default function FAQ() {
                   </h2>
                   <p>
                     To place bets on sport, it only suffices to sign up, sign in
-                    to your GGwiwi login account through the website or app, and
+                    to your 99wiwi login account through the website or app, and
                     fund your account. To make the betting process as efficient
                     and profitable as possible, you should stick to these
                     recommendations:
@@ -79,7 +79,7 @@ export default function FAQ() {
                       same time;
                     </p>
                     <p>
-                      - participate in promos and use the GGwiwi  bonus to save
+                      - participate in promos and use the 99wiwi  bonus to save
                       your own funds;
                     </p>
                     <p>
@@ -95,7 +95,7 @@ export default function FAQ() {
                   </p>
                   <h2 className="font-bold">Types of sports betting</h2>
                   <p>
-                    The official website GGwiwi has two sports betting modes:
+                    The official website 99wiwi has two sports betting modes:
                     pre-match and live. The first mode is about the outcomes of
                     a scheduled individual match or the results of the entire
                     tournament. The second mode is about betting on matches that
@@ -122,7 +122,7 @@ export default function FAQ() {
                   </p>
                   <p>
                     We have all three main types of bets at our disposal at
-                    GGwiwi besides the two online betting modes: single,
+                    99wiwi besides the two online betting modes: single,
                     accumulator, and system.
                   </p>
                   <h2 className="font-bold">Single bets</h2>
@@ -190,7 +190,7 @@ export default function FAQ() {
                     loss. Keep in mind: it{"'"}s better to place more bets with
                     low odds than use a single bet with high odds.
                   </p>
-                  <h2 className="font-bold">GGwiwi is a top 1 bookmaker</h2>
+                  <h2 className="font-bold">99wiwi is a top 1 bookmaker</h2>
                   <p>
                     Anyone can place bets on our platform regardless of their
                     geographical position. You can bet in dollars and euros, as
@@ -203,19 +203,19 @@ export default function FAQ() {
                     makes our bookmaker one of the most popular in Eastern
                     Europe, Central Asia, and other regions around the globe.
                     10+ years of experience reinforced by positive customer
-                    reviews confirms that betting at GGwiwi is easy, convenient,
+                    reviews confirms that betting at 99wiwi is easy, convenient,
                     and secure.
                   </p>
                   <h2 className="font-bold">
-                    Advantages of the GGwiwi bookmaker
+                    Advantages of the 99wiwi bookmaker
                   </h2>
                   <p>
-                    Using the services of the GGwiwi bookmaker, the customer
+                    Using the services of the 99wiwi bookmaker, the customer
                     gets significant benefits such as:
                   </p>
                   <div className="">
                     <p>
-                      - GGwiwi availability almost in any part of the world;
+                      - 99wiwi availability almost in any part of the world;
                     </p>
                     <p>
                       - variety of supported currencies and payment methods;
@@ -257,21 +257,21 @@ export default function FAQ() {
                     How to sign up and log in to Melbet?
                   </h2>
                   <p>
-                    GGwiwi registration is available via email, phone number,
+                    99wiwi registration is available via email, phone number,
                     one-click, or through social networks. You can log in to
                     your account through the same method as you used during
                     account registration.
                   </p>
-                  <h2 className="font-bold">Does GGwiwi have a mobile app?</h2>
+                  <h2 className="font-bold">Does 99wiwi have a mobile app?</h2>
                   <p>
-                    GGwiwi mobile app download can be done through our official
+                    99wiwi mobile app download can be done through our official
                     website. For Android users, they can get the app directly
                     from the download link or by scanning the QR code. iPhone
                     users can access the app using the link in the official App
                     Store catalog.
                   </p>
                   <h2 className="font-bold">
-                    Does GGwiwi provide a first deposit bonus, free bets, and
+                    Does 99wiwi provide a first deposit bonus, free bets, and
                     promos?
                   </h2>
                   <p>
