@@ -29,6 +29,17 @@ import Profile from "../components/mobile/mobile-home/pages/Profile";
 import Login from "../components/mobile/mobile-home/pages/Login";
 // import unibetsports from "../components/mobile/mobile-home/pages/unibetsports";
 import Rockgame from "../components/games/Rockgame";
+import BaccaratGame from "../components/games/BaccaratGame";
+import BlackjackGame from "../components/games/BlackjackGame";
+import CrashGame from "../components/games/CrashGame";
+import GoalGame from "../components/games/GoalGame";
+import HiloGame from "../components/games/HiloGame";
+import HiloMGame from "../components/games/HiloMGame";
+import MineGame from "../components/games/MineGame";
+import RouletteGame from "../components/games/RouletteGame";
+import SlideGame from "../components/games/SlideGame";
+import VideoPoker from "../components/games/VideoPoker";
+
 import Transactionhistory from "../components/mobile/mobile-home/pages/profile/Transactionhistory";
 import Allwithdraw from "../components/admin/pages/withdraw/Allwithdraw";
 import Pendingwithdraw from "../components/admin/pages/withdraw/Pendingwithdraw";
@@ -54,76 +65,67 @@ const router = createBrowserRouter([
   {
     path: "/",
     element: <MainLayout />,
-    children:[
+    children: [
       {
         path: "/",
         element: <Home />,
       },
-     
-    ]
+    ],
   },
   {
-    path:'/',
-    element:<Dashboardlayout/>,
-    children:[
+    path: "/",
+    element: <Dashboardlayout />,
+    children: [
       {
         path: "/en/office/recharge",
         element: <Dashboard />,
       },
       {
-        path:'/en/office/history',
-        element:<BetHistory/>
+        path: "/en/office/history",
+        element: <BetHistory />,
       },
       {
-        path:'/en/office/security',
-        element:<AccountSecurity/>
-      }
-      ,
+        path: "/en/office/security",
+        element: <AccountSecurity />,
+      },
       {
-        path:'/en/office/historypay',
-        element:<TransactionsPage/>
-      }
-      ,
+        path: "/en/office/historypay",
+        element: <TransactionsPage />,
+      },
       {
-        path:'/en/office/requests',
-        element:<PaymentQueries/>
-      }
-      ,
+        path: "/en/office/requests",
+        element: <PaymentQueries />,
+      },
       {
-        path:'/en/office/bringfriend',
-        element:<AffiliatePage/>
-      }
-      ,
+        path: "/en/office/bringfriend",
+        element: <AffiliatePage />,
+      },
       {
-        path:'/en/office/profile',
-        element:<ProfilePage/>
-      }
-      ,
+        path: "/en/office/profile",
+        element: <ProfilePage />,
+      },
       {
-        path:'/en/office/casino/vipcashback',
-        element:<CashbackPage/>
-      }
-      ,
+        path: "/en/office/casino/vipcashback",
+        element: <CashbackPage />,
+      },
       {
-        path:'/en/office/bonuses/deposit',
-        element:<BonusesGifts/>
-      }
-      ,
+        path: "/en/office/bonuses/deposit",
+        element: <BonusesGifts />,
+      },
       {
-        path:'/en/office/support',
-        element:<SupportCenter/>
-      }
-      ,
+        path: "/en/office/support",
+        element: <SupportCenter />,
+      },
       {
-        path:'/en/office/settings',
-        element:<AccountSettings/>
-      }
-    ]
+        path: "/en/office/settings",
+        element: <AccountSettings />,
+      },
+    ],
   },
   {
     path: "/admin-dashboard",
     element: <Adminlayout />,
-    children:[
+    children: [
       {
         path: "/admin-dashboard",
         element: <Overview />,
@@ -182,7 +184,7 @@ const router = createBrowserRouter([
       },
       {
         path: "/admin-dashboard/unibethub-all-games",
-        element: <unibetgames/>,
+        element: <unibetgames />,
       },
       {
         path: "/admin-dashboard/unibethub-add-game",
@@ -196,27 +198,27 @@ const router = createBrowserRouter([
         path: "/admin-dashboard/setting/general-setting",
         element: <Generalsettings />,
       },
-    ]
+    ],
   },
   {
-    path:"/admin",
-    element:<AdminLogin/>
+    path: "/admin",
+    element: <AdminLogin />,
   },
   {
-    path:"/unibet-games",
-    element:<GamePopup/>
+    path: "/unibet-games",
+    element: <GamePopup />,
   },
   {
-    path:"/registration",
-    element:<Registration/>
+    path: "/registration",
+    element: <Registration />,
   },
   {
-    path:"/deposit",
-    element:<Deposit/>
+    path: "/deposit",
+    element: <Deposit />,
   },
   {
-    path:"/profile",
-    element:<Profile/>,
+    path: "/profile",
+    element: <Profile />,
   },
   {
     path: "/profile/transaction-history",
@@ -224,39 +226,81 @@ const router = createBrowserRouter([
   },
   ,
   {
-    path:"/login",
-    element:<Login/>
+    path: "/login",
+    element: <Login />,
   },
   ,
   {
-    path:"/unibet-sports",
-    element:<unibetsports/>
-  }
-  ,
-  {
-    path:"/rock_game",
-    element:<Rockgame/>
+    path: "/unibet-sports",
+    element: <unibetsports />,
   },
   {
-    path:"/dice_game",
-    element:<Dice/>
+    path: "/rock_game",
+    element: <Rockgame />,
   },
   {
-    path:"/guessing_game",
-    element:<Gessinggame/>
+    path: "/BaccaratGame",
+    element: <BaccaratGame />,
   },
   {
-    path:"/coin_flip",
-    element:<Conflip/>
+    path: "/BlackjackGame",
+    element: <BlackjackGame />,
   },
   {
-    path:"/spin_game",
-    element:<Spingame/>
+    path: "/CrashGame",
+    element: <CrashGame />,
+  },
+  {
+    path: "/GoalGame",
+    element: <GoalGame />,
+  },
+
+  {
+    path: "/HiloGame",
+    element: <HiloGame />,
+  },
+  {
+    path: "/HiloMGame",
+    element: <HiloMGame />,
+  },
+  {
+    path: "/MineGame",
+    element: <MineGame />,
+  },
+
+  {
+    path: "/RouletteGame",
+    element: <RouletteGame />,
+  },
+  {
+    path: "/SlideGame",
+  element: <SlideGame />,
+  },
+  {
+    path: "/VideoPoker",
+    element: <VideoPoker />,
+  },
+
+  {
+    path: "/Dice Duel",
+    element: <Dice />,
+  },
+  {
+    path: "/guessing_game",
+    element: <Gessinggame />,
+  },
+  {
+    path: "/coin_flip",
+    element: <Conflip />,
+  },
+  {
+    path: "/spin_game",
+    element: <Spingame />,
   },
   {
     path: "*",
     element: <Errorpage />,
-  }
+  },
 ]);
 
 export default router;
