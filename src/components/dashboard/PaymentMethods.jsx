@@ -148,7 +148,7 @@ const [sidebar,setsidebar]=useState(false)
         <h2 className="text-lg font-semibold text-gray-800">ACCOUNT 1158267285</h2>
         <p className="text-gray-600 text-sm mb-3">Select payment method to top up your account:</p>
 
-        <div className="bg-gray-200 p-3 rounded-md flex items-start gap-3 mb-3">
+        {/* <div className="bg-gray-200 p-3 rounded-md flex items-start gap-3 mb-3">
           <FaExclamationCircle className="text-gray-600 text-xl mt-1" />
           <p className="text-gray-700 text-sm">
             আপনি জদি 3 ঘন্টার যতে আপনার অ্যাকাউন্টের ডিপোজিটের পরিমান না পেয়েই থাকে তাহলে অনুগরণ করে পরবর্তী তথ্য সহ ইমেইল 
@@ -166,7 +166,7 @@ const [sidebar,setsidebar]=useState(false)
             <br />
             <strong>Email:</strong> <a href="mailto:teamcash@melbet.com" className="text-blue-500">teamcash@melbet.com</a>
           </p>
-        </div>
+        </div> */}
       </div>
     </div>
     <section>

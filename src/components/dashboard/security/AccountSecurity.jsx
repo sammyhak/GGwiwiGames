@@ -22,7 +22,7 @@ export default function AccountSecurity() {
               <p className="text-sm text-gray-600">Change your password every month</p>
             </div>
           </div>
-          <div 
+          {/* <div 
             className="bg-white p-4 rounded-lg border flex items-center border-gray-300 cursor-pointer shadow"
             onClick={() => setShowSecurityInput(!showSecurityInput)}
           >
@@ -62,7 +62,7 @@ export default function AccountSecurity() {
               <h3 className="text-lg font-semibold">Link Your Phone</h3>
               <p className="text-sm text-gray-600">Restore access to your account</p>
             </div>
-          </div>
+          </div> */}
         </div>
         {/* <div className="mt-6 p-4 bg-gray-200 rounded-lg shadow">
           <h3 className="text-lg font-semibold">Recent Sessions</h3>
