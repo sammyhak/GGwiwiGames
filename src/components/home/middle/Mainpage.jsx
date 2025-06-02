@@ -2,7 +2,7 @@ import React from "react";
 import Carousel from "./Carousel";
 import Topmenu from "./Topmenu";
 import SportsBetting from "./SportsBetting";
-import BettingCard from "./BettingCard";
+// import BettingCard from "./BettingCard";
 import GamingUI from "../gamesUI";
 
 const Mainpage = () => {
@@ -13,7 +13,7 @@ const Mainpage = () => {
       <section>
         <Topmenu />
         <SportsBetting />
-        <BettingCard />
+        {/* <BettingCard /> */}
       </section>
     </section>
   );

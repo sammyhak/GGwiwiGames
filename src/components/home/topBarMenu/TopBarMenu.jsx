@@ -1,5 +1,13 @@
 import { useState, useEffect } from "react";
-import { FaBookOpen, FaFacebookF, FaGift, FaInstagram, FaTelegramPlane, FaTwitter, FaYoutube } from "react-icons/fa";
+import {
+  FaBookOpen,
+  FaFacebookF,
+  FaGift,
+  FaInstagram,
+  FaTelegramPlane,
+  FaTwitter,
+  FaYoutube,
+} from "react-icons/fa";
 import axios from "axios";
 import { FaUserAlt } from "react-icons/fa";
 import { MdSportsCricket } from "react-icons/md";
@@ -8,45 +16,21 @@ import { IoIosStar } from "react-icons/io";
 import { Link, NavLink } from "react-router-dom";
 import logo from "../../../assets/logo.png";
 import square_img from "../../../assets/square_img.png";
-import { FaChevronDown, FaEnvelope, FaUserCircle, FaRedo, FaCog, FaPhone } from "react-icons/fa";
+import {
+  FaChevronDown,
+  FaEnvelope,
+  FaUserCircle,
+  FaRedo,
+  FaCog,
+  FaPhone,
+} from "react-icons/fa";
 import RegistrationPopup from "../modal/RegistrationPopup";
 import LoginPopup from "../modal/LoginPopup";
 import { FaCloudDownloadAlt } from "react-icons/fa";
 import { IoMdClose } from "react-icons/io";
 import toast, { Toaster } from "react-hot-toast";
 
-const menuItems = [
-  {
-    name: "All Games",
-    subMenu: [
-      "Rock, Paper",
-      "Coin Flip",
-      "Roll",
-      "Dice Duel",
-      "Guess The Number",
-      "BlackjackGame",
-      "CrashGame",
-      "GoalGame",
-      "HiloGame",
-      "HiloMGame",
-      "MineGame",
-      "RouletteGame",
-      "SlideGame",
-      "VideoPoker",
-    ],
-  },
-  { name: "LIVE CASINO", subMenu: ["Roulette", "Blackjack", "Baccarat"] },
-];
-
 const links = [];
-
-const socialLinks = [
-  { id: 1, icon: <FaFacebookF />, url: "https://facebook.com" },
-  { id: 2, icon: <FaTwitter />, url: "https://twitter.com" },
-  { id: 3, icon: <FaInstagram />, url: "https://instagram.com" },
-  { id: 4, icon: <FaYoutube />, url: "https://youtube.com" },
-  { id: 5, icon: <FaTelegramPlane />, url: "https://telegram.com" },
-];
 
 const TopBarMenu = () => {
   const [openMenu, setOpenMenu] = useState(null);
@@ -68,9 +52,12 @@ const TopBarMenu = () => {
     try {
       console.log("hello");
       await axios
-        .get(`https://ggwiwigamesbe.onrender.com/user/user-info/${user_info._id}`, {
-          headers: { Authorization: localStorage.getItem("token") },
-        })
+        .get(
+          `https://ggwiwigamesbe.onrender.com/user/user-info/${user_info._id}`,
+          {
+            headers: { Authorization: localStorage.getItem("token") },
+          }
+        )
         .then((res) => {
           set_userdetails(res.data);
           console.log(res.data);
@@ -79,7 +66,10 @@ const TopBarMenu = () => {
           console.log(err);
         });
     } catch (error) {
-      console.error("Error fetching user data:", error.response?.data || error.message);
+      console.error(
+        "Error fetching user data:",
+        error.response?.data || error.message
+      );
     }
   };
 
@@ -107,7 +97,11 @@ const TopBarMenu = () => {
         {/* WhatsApp */}
         <div className="fixed bottom-[10px] left-[1%]">
           <NavLink to="https://wa.me/+447446292875" target="_blank">
-            <img className="w-[50px]" src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/WhatsApp.svg/1022px-WhatsApp.svg.png" alt="" />
+            <img
+              className="w-[50px]"
+              src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/WhatsApp.svg/1022px-WhatsApp.svg.png"
+              alt=""
+            />
           </NavLink>
         </div>
 
@@ -128,13 +122,6 @@ const TopBarMenu = () => {
                     </Link>
                   ))}
                 </div>
-                <div className="flex gap-2 justify-end items-center">
-                  {socialLinks.map((social) => (
-                    <Link key={social.id} to={social.url} target="_blank">
-                      <div className="p-1.5 text-gray-800 bg-theme-color hover:bg-yellow-500 rounded-full duration-300">{social.icon}</div>
-                    </Link>
-                  ))}
-                </div>
               </div>
               <div className="flex items-center justify-between px-4 py-1 text-white text-xs">
                 {user ? (
@@ -144,39 +131,69 @@ const TopBarMenu = () => {
                     </div>
                     <div className="lg:flex hidden items-center gap-1  cursor-pointer hover:text-gray-300">
                       <span>
-                        Main account (BDT) <strong>{user_details.balance?.toFixed(2)}</strong>
+                        Main account (BDT){" "}
+                        <strong>{user_details.balance?.toFixed(2)}</strong>
                       </span>
                       <FaChevronDown size={10} />
                     </div>
                     <div className="relative lg:block hidden cursor-pointer">
                       <FaEnvelope size={18} className="text-theme-color" />
-                      <span className="absolute -top-1 -right-1 bg-red-600 text-[9px] text-white px-1 rounded-full">1</span>
+                      <span className="absolute -top-1 -right-1 bg-red-600 text-[9px] text-white px-1 rounded-full">
+                        1
+                      </span>
                     </div>
                     <NavLink to="/en/office/profile">
-                      <FaUserCircle size={20} className="cursor-pointer lg:block hidden hover:text-gray-300" />
+                      <FaUserCircle
+                        size={20}
+                        className="cursor-pointer lg:block hidden hover:text-gray-300"
+                      />
                     </NavLink>
-                    <FaRedo size={18} className="cursor-pointer lg:block hidden hover:text-gray-300" />
-                    <NavLink to="/en/office/recharge" className="bg-theme-color  lg:block hidden text-black px-3 py-[7px] rounded-sm text-[13px] font-semibold">
+                    <FaRedo
+                      size={18}
+                      className="cursor-pointer lg:block hidden hover:text-gray-300"
+                    />
+                    <NavLink
+                      to="/en/office/recharge"
+                      className="bg-theme-color  lg:block hidden text-black px-3 py-[7px] rounded-sm text-[13px] font-semibold"
+                    >
                       Make a deposit
                     </NavLink>
-                    <FaCog size={18} className="cursor-pointer  lg:block hidden hover:text-gray-300" />
+                    <FaCog
+                      size={18}
+                      className="cursor-pointer  lg:block hidden hover:text-gray-300"
+                    />
                     <span className="lg:block hidden text-[14px]">19:28</span>
                     <div className="lg:flex hidden items-center gap-1  text-[14px] cursor-pointer hover:text-gray-300">
                       <span>EN</span>
                       <FaChevronDown size={15} />
                     </div>
-                    <FaPhone size={16} className="cursor-pointer lg:block hidden hover:text-gray-300" />
+                    <FaPhone
+                      size={16}
+                      className="cursor-pointer lg:block hidden hover:text-gray-300"
+                    />
                   </div>
                 ) : (
                   <div className="hidden lg:flex items-center gap-3">
-                    <div className="px-3 py-2 text-[15px] text-gray-800 font-[500] bg-theme-color hover:bg-yellow-500 rounded-sm cursor-pointer transition-all" onClick={() => setIsOpen(true)}>
-                      Registration
-                    </div>
-                    <RegistrationPopup isOpen={isOpen} onClose={() => setIsOpen(false)} />
-                    <div className="px-3 py-2 text-[15px] text-white bg-[#3b3b3b] hover:bg-[#4d4c4c] rounded-sm cursor-pointer transition-all" onClick={() => setShowPopup(true)}>
+                    <div
+                      className="px-3 py-2 text-[15px] text-white bg-[#CF2728] hover:bg-[#4d4c4c] rounded-sm cursor-pointer transition-all"
+                      onClick={() => setShowPopup(true)}
+                    >
                       Login
                     </div>
-                    {showPopup && <LoginPopup onClose={() => setShowPopup(false)} />}
+                    {showPopup && (
+                      <LoginPopup onClose={() => setShowPopup(false)} />
+                    )}
+
+                    <div
+                      className="px-3 py-2 text-[15px] text-gray-800 font-[500] bg-[#CF2728] hover:bg-yellow-500 rounded-sm cursor-pointer transition-all"
+                      onClick={() => setIsOpen(true)}
+                    >
+                      Register
+                    </div>
+                    <RegistrationPopup
+                      isOpen={isOpen}
+                      onClose={() => setIsOpen(false)}
+                    />
                   </div>
                 )}
               </div>
@@ -188,7 +205,7 @@ const TopBarMenu = () => {
               </div>
 
               {/* Main Menu */}
-              <div className="flex items-center relative z-[10] pl-[0px] ml-[-10px]">
+              {/* <div className="flex items-center relative z-[10] pl-[0px] ml-[-10px]">
                 {menuItems.map((menu, index) => (
                   <div key={index} className="relative" onMouseEnter={() => setOpenMenu(index)} onMouseLeave={() => setOpenMenu(null)}>
                     <div className="flex items-center px-1 py-2 text-sm font-bold cursor-pointer uppercase">
@@ -212,22 +229,19 @@ const TopBarMenu = () => {
                 <div className="text-red-500 font-[600] ml-[15px]">
                   <NavLink to="/unibet-sports">99wiwi 🔥</NavLink>
                 </div>
-              </div>
+              </div> */}
 
               {/* Right Icon */}
-              <div className="ml-auto pr-4 lg:flex hidden">
-                <FaBookOpen size={20} />
-              </div>
             </div>
           </div>
         </div>
       </div>
 
       {/* Mobile menu - Also added margin top */}
-      <div className="flex xl:hidden items-center justify-between py-[15px] bg-[#212121] px-3 w-full mt-4">
+      <div className="flex xl:hidden items-center justify-between py-[15px] bg-[#212121] px-1 w-full mt-1">
         <div className="text-white font-bold text-lg">
           <NavLink to="/">
-            <img src={logo} className="w-[130px]" alt="" />
+            <img src={logo} className="w-[70px]" alt="" />
           </NavLink>
         </div>
         <div>
@@ -248,10 +262,14 @@ const TopBarMenu = () => {
           ) : (
             <div className="flex space-x-2">
               <NavLink to="/login" className="cursor-pointer">
-                <button className="bg-[#2E2E2E] text-white text-[13px] px-4 py-[9px] rounded">Log in</button>
+                <button className="bg-[#2E2E2E] text-white text-[13px] px-4 py-[9px] rounded">
+                  Log in
+                </button>
               </NavLink>
               <NavLink to="/registration" className="cursor-pointer">
-                <button className="bg-theme-color text-[13px] text-black px-4 py-[9px] rounded">Registration</button>
+                <button className="bg-[#2E2E2E] text-[13px] text-white  px-4 py-[9px] rounded">
+                  Registration
+                </button>
               </NavLink>
             </div>
           )}

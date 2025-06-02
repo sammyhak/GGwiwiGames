@@ -19,6 +19,7 @@
     "localforage": "^1.10.0",
     "lucide-react": "^0.475.0",
     "match-sorter": "^8.0.0",
+    "melbet": "file:",
     "moment": "^2.30.1",
     "qrcode.react": "^4.2.0",
     "react": "^18.3.1",

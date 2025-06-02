@@ -132,9 +132,9 @@ const GamingUI = () => {
     <div className="">
       {/* Top Promotional Banner */}
       <div className="flex overflow-x-auto gap-4 mb-6">
-        <Card color="bg-primary text-white" img={IMAGES.welcome2} text="100% Welcome Offer 1BTC" />
-        <Card color="bg-purple-500 text-white" img={IMAGES.treasure} text="Treasure Hunt!" />
-        <Card color="bg-green-500 text-white" img={IMAGES.welcomebonus} text="Daily $30,000 Competition" />
+        <Card color="bg-primary text-white" img={IMAGES.welcome2} text="Real-Time Live Games" />
+        <Card color="bg-purple-500 text-white" img={IMAGES.treasure} text="Instant Payouts" />
+        <Card color="bg-green-500 text-white" img={IMAGES.welcomebonus} text="Gaming Community Vibes" />
       </div>
 
       {/* Search & Filters */}
