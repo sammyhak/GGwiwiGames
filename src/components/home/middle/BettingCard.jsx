@@ -92,7 +92,7 @@ export default function BettingCard() {
               </div>
             ))}
             <div className="flex justify-between p-2 bg-white rounded-md mt-2 border border-gray-300 text-xs md:text-sm">
-              <span className="text-gray-700">BONUS from MelBet</span>
+              <span className="text-gray-700">BONUS from 99wiwi</span>
               <span className="font-bold text-gray-900">{bet.bonus}</span>
             </div>
             <div className="flex justify-between p-2 bg-white rounded-md mt-2 border border-gray-300 text-xs md:text-sm">
