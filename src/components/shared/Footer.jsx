@@ -30,22 +30,10 @@ const Footer = () => {
         <FooterMenu />
         <Partners />
 
-        {/* <p className="p-4 text-sm text-[#c2c2c2] bg-[#212121] rounded-md">
-          melbet.com is owned and operated by Pelican Entertainment B.V. as a
-          License Holder (Curacao Egaming License No. 8048/JAZ2020-060) with a
-          registered office located at Dr. H. Fergusonweg 1, Curaсao and Edric
-          Ltd (with registration number HE446653 and registered office located
-          at Dimostheni Severi, 23, office 11, 1080, Limassol, Cyprus) and Faren
-          Ltd (with registration number HE446654 and registered office located
-          at Dimostheni Severi, 23, office 11, 1080, Limassol, Cyprus) act as
-          Billing Agents for the website. All rights reserved and protected by
-          law.
-        </p> */}
-
         <div className="flex lg:flex-row flex-col gap-3 w-full text-[#c2c2c2]">
           <div className="p-4 text-[12px] lg:text-sm bg-[#212121] rounded-md">
             <p>
-              GGwiwiuses cookies to ensure the best user experience. By
+              99wiwi uses cookies to ensure the best user experience. By
               remaining on the website, you consent to the use of your cookie
               files on Melbet.{" "}
               <Link>
