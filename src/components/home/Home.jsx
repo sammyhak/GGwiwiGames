@@ -4,6 +4,7 @@ import Mainpage from "./middle/Mainpage";
 import Leftside from "./leftside/Leftside";
 import Rightside from "./rightside/Rightside";
 import TopBarMenu from "./topBarMenu/TopBarMenu";
+import LiveMatchResults from "./liveMatchResult/liveMatchResult";
 import Topcard from "../mobile/mobile-home/games/Topcard";
 import LiveSportsNav from "../mobile/mobile-home/games/LiveSportsNav";
 import MatchEventBox from "../mobile/mobile-home/games/MatchEventBox";
@@ -22,7 +23,8 @@ const Home = () => {
       {/* --------------computer-version---------------- */}
       <section className="xl:flex w-full justify-center">
         <div className="w-1/6 hidden md:block">
-          <Leftside />
+          {/* <Leftside /> */}
+          <LiveMatchResults />
         </div>
         <Mainpage />
         <Rightside />

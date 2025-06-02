@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import Card from "./_component/card";
 import FeaturedCard from "./_component/featuredCard";
 import GameCard from "./_component/gameCard";
+import LiveCard from "./_component/liveGameCard";
 import Glowcard from "../../shared/glowcard";
 import IMAGES from "../../../assets/images";
 import axios from "axios";
@@ -37,6 +38,34 @@ let featuredGames = [
     color: "bg-primary border-primary",
     path: "/guessing_game",
   },
+];
+
+let LiveGames = [
+  {
+    name: "Roulett",
+    img: "https://script.viserlab.com/xaxino/demo/assets/templates/basic//images/play/rock.png",
+    color: "bg-yellow-600 border-yellow-600",
+    path: "/rock_game",
+  },
+  {
+    name: "BlackJack",
+    img: "https://script.viserlab.com/xaxino/demo/assets/templates/basic/images/play/head.png",
+    color: "bg-primary border-primary",
+    path: "/coin_flip",
+  },
+  {
+    name: "Baccarat",
+    img: IMAGES.roll,
+    color: "bg-yellow-500 border-yellow-500",
+    path: "/spin_game",
+  },
+  {
+    name: "Fighting Chicken",
+    img: IMAGES.dice,
+    color: "bg-primary border-primary",
+    path: "/dice_game",
+  },
+  { name: "CrashGame", img: IMAGES.crash, color: "bg-primary border-primary", path: "/dice_game" },
 ];
 
 const otherGames = [
@@ -90,9 +119,7 @@ const GamingUI = () => {
   useEffect(() => {
     const fetchGames = async () => {
       try {
-        const response = await axios.get(
-          "https://ggwiwigamesbe.onrender.com/admin/games"
-        );
+        const response = await axios.get("https://ggwiwigamesbe.onrender.com/admin/games");
         setGames(response.data);
       } catch (error) {
         console.error("Error fetching games:", error);
@@ -105,41 +132,18 @@ const GamingUI = () => {
     <div className="">
       {/* Top Promotional Banner */}
       <div className="flex overflow-x-auto gap-4 mb-6">
-        <Card
-          color="bg-primary text-white"
-          img={IMAGES.welcome2}
-          text="100% Welcome Offer 1BTC"
-        />
-        <Card
-          color="bg-purple-500 text-white"
-          img={IMAGES.treasure}
-          text="Treasure Hunt!"
-        />
-        <Card
-          color="bg-green-500 text-white"
-          img={IMAGES.welcomebonus}
-          text="Daily $30,000 Competition"
-        />
+        <Card color="bg-primary text-white" img={IMAGES.welcome2} text="100% Welcome Offer 1BTC" />
+        <Card color="bg-purple-500 text-white" img={IMAGES.treasure} text="Treasure Hunt!" />
+        <Card color="bg-green-500 text-white" img={IMAGES.welcomebonus} text="Daily $30,000 Competition" />
       </div>
 
       {/* Search & Filters */}
       <div className="flex items-center gap-4 mb-6 text-white">
-        <input
-          type="text"
-          placeholder="Search for games"
-          className="bg-gray-800 p-3 rounded-lg w-full text-wgray-500"
-        />
+        <input type="text" placeholder="Search for games" className="bg-gray-800 p-3 rounded-lg w-full text-wgray-500" />
         <button className="bg-gray-700 px-4 py-2 rounded-lg">Sort</button>
       </div>
       <div className="flex overflow-x-auto gap-2 mb-6">
-        {[
-          "All Games",
-          "Crash Games",
-          "New Games",
-          "Card Games",
-          "Top Games",
-          "Providers",
-        ].map((category, index) => (
+        {["All Games", "Crash Games", "New Games", "Card Games", "Top Games", "Providers"].map((category, index) => (
           // <Glowcard
           //   show={selectedCategory === category}
           //   color="bg-primary border-primary text-white"
@@ -156,23 +160,20 @@ const GamingUI = () => {
           <></>
         ))}
       </div>
+      <div className="uppercase mb-2 text-white">Live Casino Games</div>
+      <div className="grid grid-cols-2 md:grid-cols-5 gap-2 mb-6">
+        {games && games.length > 0
+          ? games.map((game, index) => <LiveCard key={index} path={`/${game.slug}?id=${game._id}`} name={game.gameName} img={game.image} color={game.color} />)
+          : LiveGames.map((game, index) => <LiveCard key={index} {...game} />)}
+      </div>
       <div className="uppercase mb-2 text-white">{selectedCategory}</div>
       {/* Game Grid */}
       <div className="grid grid-cols-2 md:grid-cols-5 gap-2 mb-6">
         {games && games.length > 0
-          ? games.map((game, index) => (
-              <FeaturedCard
-                key={index}
-                path={`/${game.slug}?id=${game._id}`}
-                name={game.gameName}
-                img={game.image}
-                color={game.color}
-              />
-            ))
-          : featuredGames.map((game, index) => (
-              <FeaturedCard key={index} {...game} />
-            ))}
+          ? games.map((game, index) => <FeaturedCard key={index} path={`/${game.slug}?id=${game._id}`} name={game.gameName} img={game.image} color={game.color} />)
+          : featuredGames.map((game, index) => <FeaturedCard key={index} {...game} />)}
       </div>
+
       <div className="uppercase mb-2 text-white">Other games</div>
       <div className="grid grid-cols-2 md:grid-cols-5 gap-2 mb-6">
         {otherGames.map((game, index) => (
