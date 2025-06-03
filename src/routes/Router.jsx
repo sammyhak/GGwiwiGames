@@ -60,6 +60,7 @@ import Gamesdetails from "../components/admin/pages/unibetgames/Gamesdetails";
 import Generalsettings from "../components/admin/pages/setting/Generalsettings";
 import Addgame from "../components/admin/pages/unibetgames/Addgame";
 import Dice from "../components/games/Dice";
+import Leaderboard from "../components/home/leaderboard/leaderboard";
 
 const router = createBrowserRouter([
   {
@@ -69,6 +70,10 @@ const router = createBrowserRouter([
       {
         path: "/",
         element: <Home />,
+      },
+      {
+        path: "/leaderboard",
+        element: <Leaderboard />,
       },
     ],
   },
@@ -274,7 +279,7 @@ const router = createBrowserRouter([
   },
   {
     path: "/SlideGame",
-  element: <SlideGame />,
+    element: <SlideGame />,
   },
   {
     path: "/VideoPoker",

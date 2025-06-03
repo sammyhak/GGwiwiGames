@@ -15,7 +15,7 @@ const generateMatchResult = () => {
   };
 };
 
-const LiveMatchResults = () => {
+const Leaderboard = () => {
   const [matches, setMatches] = useState([]);
 
   // Load initial leaderboard data by default
@@ -79,4 +79,4 @@ const LiveMatchResults = () => {
   );
 };
 
-export default LiveMatchResults;
+export default Leaderboard;
