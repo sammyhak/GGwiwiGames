@@ -287,7 +287,7 @@ const router = createBrowserRouter([
   },
 
   {
-    path: "/Dice Duel",
+    path: "/dice_game",
     element: <Dice />,
   },
   {
