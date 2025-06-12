@@ -6,12 +6,12 @@ import GamingUI from "../gamesUI";
 
 const Mainpage = () => {
   return (
-    <section className="px-[5px] w-full lg:w-[80%] h-[100vh] bg-[#1A1A1A]  overflow-y-auto custom-scrollbar">
+    <section className="px-[5px] w-full lg:w-[80%] h-[100vh] bg-[#1A1A1A]  overflow-y-auto">
       <Carousel />
       <GamingUI />
       <section>
         <Topmenu />
-        <SportsBetting />
+        {/* <SportsBetting /> */}
       </section>
     </section>
   );

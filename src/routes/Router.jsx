@@ -288,7 +288,7 @@ const router = createBrowserRouter([
 
   {
     path: "/dice_game",
-    element: <Dice />,
+    element: <Dicegame />,
   },
   {
     path: "/guessing_game",
