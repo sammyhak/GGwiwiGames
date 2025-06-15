@@ -253,11 +253,11 @@ const Sidebar = () => {
         },
       ],
     },
-    {
-      name: "Settings",
-      icon: VscSettingsGear,
-      color: "#EC4899",
-      href: "/admin-dashboard/settings",
+    // {
+    //   name: "Settings",
+    //   icon: VscSettingsGear,
+    //   color: "#EC4899",
+    //   href: "/admin-dashboard/settings",
       // 	submenu: [
       // 	{ name: " General Setting", href: "/users/active-user" },
       // 	{ name: " System Configuration", href: "/users/banned-user"},
@@ -275,7 +275,7 @@ const Sidebar = () => {
       // 	{ name: " Sitemap XML", href: "/users/send-notification" },
 
       // ],
-    },
+    // },
 
     // { name: "Support Oracle", icon: BiSupport, color: "#fd9644", href: "/users",submenu: [
     // 	{ name: "Instent Support", href: "/users/active-user" },
